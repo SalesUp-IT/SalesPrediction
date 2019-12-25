@@ -1,3 +1,3 @@
-### Sales predictor
+# Sales predictor
 
 ## Mission
