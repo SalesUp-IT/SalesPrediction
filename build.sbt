@@ -19,7 +19,8 @@ val productionDependencies = Seq(
   "net.debasishg" %% "redisclient" % "3.8",
   "org.quartz-scheduler" % "quartz" % "2.2.1",
   "io.swagger" %% "swagger-play2" % "1.6.0",
-  "org.webjars" % "swagger-ui" % "3.2.2"
+  "org.webjars" % "swagger-ui" % "3.2.2",
+  "io.lemonlabs" %% "scala-uri" % "1.4.4"
 )
 
 val testDependencies = Seq(
