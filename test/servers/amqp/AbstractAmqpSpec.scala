@@ -5,8 +5,6 @@ import play.api.Configuration
 import play.api.libs.json.{Format, Json}
 import servers.PlaySpecWithEmbeddedServers
 
-case class TestMessage(body: String)
-
 class AbstractAmqpSpec extends PlaySpecWithEmbeddedServers(EmbeddedAmqpBroker) {
 
   private val config = app.injector.instanceOf(classOf[Configuration])
