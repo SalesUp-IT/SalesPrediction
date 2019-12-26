@@ -14,7 +14,9 @@ import scala.util.{Failure, Success, Try}
 @javax.inject.Singleton
 class MongoDatabaseProvider @Inject()(configuration: Configuration) extends Provider[MongoDatabase] {
 
-  private[this] lazy val mongoUri: String = configuration.getOptional[String]("mongodb.uri").getOrElse("mongodb://localhost:27017/naomi")
+  private[this] lazy val mongoUri: String = configuration
+    .getOptional[String]("mongodb.uri")
+    .getOrElse("mongodb://localhost:27017/naomi")
 
   override def get(): MongoDatabase = {
     Url.parseTry(mongoUri) match {
