@@ -22,7 +22,7 @@ class MongoDatabaseProvider @Inject()(configuration: Configuration) extends Prov
         val client = MongoClient(mongoUri)
         val dbName = Try {
           url.path.parts(0)
-        }.getOrElse("naomi")
+        }.getOrElse("sales_predictor")
 
         val codecRegistry = fromRegistries(fromProviders(
           //classOf[UserSession]
